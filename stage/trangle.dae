@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.78.0 commit date:2016-10-24, commit time:12:20, hash:e8299c8</authoring_tool>
+    </contributor>
+    <created>2017-11-06T15:50:24</created>
+    <modified>2017-11-06T15:50:24</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Camera-camera" name="Camera.001">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">49.13434</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <YF_dofdist>0</YF_dofdist>
+          <shiftx>0</shiftx>
+          <shifty>0</shifty>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_lights>
+    <light id="Hemi-light" name="Hemi">
+      <technique_common>
+        <ambient>
+          <color>1 1 1</color>
+        </ambient>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <adapt_thresh>9.99987e-4</adapt_thresh>
+          <area_shape>0</area_shape>
+          <area_size>0.1</area_size>
+          <area_sizey>0.1</area_sizey>
+          <area_sizez>0.1</area_sizez>
+          <atm_distance_factor>1</atm_distance_factor>
+          <atm_extinction_factor>1</atm_extinction_factor>
+          <atm_turbidity>2</atm_turbidity>
+          <att1>0</att1>
+          <att2>1</att2>
+          <backscattered_light>1</backscattered_light>
+          <bias>1</bias>
+          <blue>1</blue>
+          <buffers>1</buffers>
+          <bufflag>0</bufflag>
+          <bufsize>512</bufsize>
+          <buftype>2</buftype>
+          <clipend>40</clipend>
+          <clipsta>0.5</clipsta>
+          <compressthresh>0.04999995</compressthresh>
+          <dist sid="blender_dist">25</dist>
+          <energy sid="blender_energy">1</energy>
+          <falloff_type>2</falloff_type>
+          <filtertype>0</filtertype>
+          <flag>0</flag>
+          <gamma sid="blender_gamma">1</gamma>
+          <green>1</green>
+          <halo_intensity sid="blnder_halo_intensity">1</halo_intensity>
+          <horizon_brightness>1</horizon_brightness>
+          <mode>1</mode>
+          <ray_samp>1</ray_samp>
+          <ray_samp_method>1</ray_samp_method>
+          <ray_samp_type>0</ray_samp_type>
+          <ray_sampy>1</ray_sampy>
+          <ray_sampz>1</ray_sampz>
+          <red>1</red>
+          <samp>3</samp>
+          <shadhalostep>0</shadhalostep>
+          <shadow_b sid="blender_shadow_b">0</shadow_b>
+          <shadow_g sid="blender_shadow_g">0</shadow_g>
+          <shadow_r sid="blender_shadow_r">0</shadow_r>
+          <sky_colorspace>2</sky_colorspace>
+          <sky_exposure>1</sky_exposure>
+          <skyblendfac>1</skyblendfac>
+          <skyblendtype>1</skyblendtype>
+          <soft>3</soft>
+          <spotblend>0.15</spotblend>
+          <spotsize>45</spotsize>
+          <spread>1</spread>
+          <sun_brightness>1</sun_brightness>
+          <sun_effect_type>0</sun_effect_type>
+          <sun_intensity>1</sun_intensity>
+          <sun_size>1</sun_size>
+          <type>3</type>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="trangle_001" name="trangle_001">
+      <init_from>trangle.001.jpg</init_from>
+    </image>
+    <image id="trangle" name="trangle">
+      <init_from>trangle.jpg</init_from>
+    </image>
+  </library_images>
+  <library_effects>
+    <effect id="Marble-effect">
+      <profile_COMMON>
+        <newparam sid="trangle-surface">
+          <surface type="2D">
+            <init_from>trangle</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="trangle-sampler">
+          <sampler2D>
+            <source>trangle-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="trangle-sampler" texcoord="ID16-mesh-map-0"/>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.25 0.25 0.25 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Marble-material" name="Marble">
+      <instance_effect url="#Marble-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ID16-mesh" name="ID16">
+      <mesh>
+        <source id="ID16-mesh-positions">
+          <float_array id="ID16-mesh-positions-array" count="180">2.70915 13.28471 0 -0.2475433 -11.64048 0 -0.2475433 13.28471 0 2.70915 -11.64048 0 -0.2475433 13.28471 2.019685 -0.2475433 -11.64048 0 -0.2475433 -11.64048 2.019685 -0.2475433 13.28471 0 -0.2475433 13.28471 2.019685 2.70915 13.28471 0 -0.2475433 13.28471 0 2.70915 13.28471 2.019685 2.70915 13.28471 0 2.70915 -11.64048 2.019685 2.70915 -11.64048 0 2.70915 13.28471 2.019685 2.70915 -11.64048 2.019685 -0.2475433 -11.64048 0 2.70915 -11.64048 0 -0.2475433 -11.64048 2.019685 2.70915 -11.64048 2.019685 -0.2475433 13.28471 2.019685 -0.2475433 -11.64048 2.019685 2.70915 13.28471 2.019685 -0.2475433 0.9071967 25.66929 -0.2475433 -15.69138 0 -0.2475433 -17.70974 0 -0.2475433 0.9071967 22.52002 -0.2475433 19.24185 0 -0.2475433 17.04515 0 2.70915 0.9071967 25.66929 -0.2475433 -17.70974 0 2.70915 -17.70974 0 -0.2475433 0.9071967 25.66929 -0.2475433 0.9071967 25.66929 2.70915 19.24185 0 -0.2475433 19.24185 0 2.70915 0.9071967 25.66929 -0.2475433 19.24185 0 2.70915 17.04515 0 -0.2475433 17.04515 0 2.70915 19.24185 0 2.70915 0.9071967 22.52002 -0.2475433 17.04515 0 2.70915 17.04515 0 -0.2475433 0.9071967 22.52002 -0.2475433 0.9071967 22.52002 2.70915 -15.69138 0 -0.2475433 -15.69138 0 2.70915 0.9071967 22.52002 2.70915 -15.69138 0 -0.2475433 -17.70974 0 -0.2475433 -15.69138 0 2.70915 -17.70974 0 2.70915 -15.69138 0 2.70915 0.9071967 25.66929 2.70915 -17.70974 0 2.70915 0.9071967 22.52002 2.70915 17.04515 0 2.70915 19.24185 0</float_array>
+          <technique_common>
+            <accessor source="#ID16-mesh-positions-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID16-mesh-normals">
+          <float_array id="ID16-mesh-normals-array" count="51">0 0 -1 -1 0 0 0 1 0 1 0 0 0 -1 0 0 0 1 -1 0 0 0 -0.80951 0.5871061 0 -0.8095101 0.5871062 0 0.8137418 0.5812267 0 0.8137418 0.5812266 0 -0.812841 -0.5824856 0 -0.8128411 -0.5824857 0 0.8049726 -0.5933121 0 0.8049726 -0.593312 1 -1.45952e-7 0 1 1.50118e-7 0</float_array>
+          <technique_common>
+            <accessor source="#ID16-mesh-normals-array" count="17" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID16-mesh-map">
+          <float_array id="ID16-mesh-map-array" count="192">0.3949468 0.5496446 2.22216e-4 0.5028216 0.3949467 0.5028215 2.22216e-4 0.5028216 0.3949468 0.5496446 2.22246e-4 0.5496447 0.3949453 0.6297858 2.22246e-4 0.6617703 2.22216e-4 0.6297858 2.22246e-4 0.6617703 0.3949453 0.6297858 0.3949453 0.6617704 0.4626078 0.5028215 0.4306234 0.5496447 0.4306234 0.5028215 0.4306234 0.5496447 0.4626078 0.5028215 0.4626078 0.5496447 0.3949453 0.5973568 2.22246e-4 0.6293414 2.22216e-4 0.5973569 2.22246e-4 0.6293414 0.3949453 0.5973568 0.3949453 0.6293413 0.4422144 0.5820736 0.3953912 0.5500892 0.4422144 0.5500892 0.3953912 0.5500892 0.4422144 0.5820736 0.3953912 0.5820736 2.22216e-4 0.5500892 0.3949467 0.5969123 2.22216e-4 0.5969123 0.3949467 0.5969123 2.22216e-4 0.5500892 0.3949467 0.5500892 0.950551 2.22216e-4 0.5003891 0.1782275 0.4743791 0.1596494 0.5003891 0.1782275 0.950551 2.22216e-4 0.9215634 0.04080611 0.9215634 0.04080611 0.950551 2.22216e-4 0.9505509 0.4997785 0.9215634 0.04080611 0.9505509 0.4997785 0.9222419 0.4795584 0.9978184 0.5023891 0.9509954 2.22216e-4 0.9978184 2.22246e-4 0.9509954 2.22216e-4 0.9978184 0.5023891 0.9509954 0.5023891 0.5212023 0.9997777 0.4743791 0.5002229 0.5212022 0.5002229 0.4743791 0.5002229 0.5212023 0.9997777 0.4743792 0.9997777 0.4301789 0.5028215 0.3953912 0.5496447 0.3953912 0.5028215 0.3953912 0.5496447 0.4301789 0.5028215 0.4301789 0.5496447 0.6157376 0.9389747 0.5689145 0.5002229 0.6157376 0.5002229 0.5689145 0.5002229 0.6157376 0.9389747 0.5689145 0.9389747 0.56847 0.9432622 0.5216467 0.500223 0.56847 0.5002229 0.5216467 0.500223 0.56847 0.9432622 0.5216467 0.9432622 0.3953912 0.5825181 0.4273546 0.6293413 0.3953912 0.6293413 0.4273546 0.6293413 0.3953912 0.5825181 0.4273546 0.5825181 0.02609711 0.01898831 2.22216e-4 0.502377 2.22246e-4 2.22216e-4 2.22216e-4 0.502377 0.02609711 0.01898831 0.02950334 0.462004 2.22216e-4 0.502377 0.02950334 0.462004 0.445774 0.3233484 2.22216e-4 0.502377 0.445774 0.3233484 0.4739347 0.3437723</float_array>
+          <technique_common>
+            <accessor source="#ID16-mesh-map-array" count="96" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID16-mesh-vertices">
+          <input semantic="POSITION" source="#ID16-mesh-positions"/>
+        </vertices>
+        <polylist material="Marble-material" count="32">
+          <input semantic="VERTEX" source="#ID16-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID16-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID16-mesh-map" offset="2" set="0"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>0 0 0 1 0 1 2 0 2 1 0 3 0 0 4 3 0 5 4 1 6 5 1 7 6 1 8 5 1 9 4 1 10 7 1 11 8 2 12 9 2 13 10 2 14 9 2 15 8 2 16 11 2 17 12 3 18 13 3 19 14 3 20 13 3 21 12 3 22 15 3 23 16 4 24 17 4 25 18 4 26 17 4 27 16 4 28 19 4 29 20 5 30 21 5 31 22 5 32 21 5 33 20 5 34 23 5 35 24 1 36 25 1 37 26 1 38 25 6 39 24 6 40 27 6 41 27 1 42 24 1 43 28 1 44 27 1 45 28 1 46 29 1 47 30 7 48 31 7 49 32 7 50 31 8 51 30 8 52 33 8 53 34 9 54 35 9 55 36 9 56 35 10 57 34 10 58 37 10 59 38 0 60 39 0 61 40 0 62 39 0 63 38 0 64 41 0 65 42 11 66 43 11 67 44 11 68 43 12 69 42 12 70 45 12 71 46 13 72 47 13 73 48 13 74 47 14 75 46 14 76 49 14 77 50 0 78 51 0 79 52 0 80 51 0 81 50 0 82 53 0 83 54 3 84 55 3 85 56 3 86 55 15 87 54 15 88 57 15 89 55 16 90 57 16 91 58 16 92 55 3 93 58 3 94 59 3 95</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="Camera" name="Camera" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.481132 0.7276763 0.3054209 -0.6141704 -6.50764 -4.01133e-9 0.8953956 0.4452714 5.343665 0 0 0 1</matrix>
+        <instance_camera url="#Camera-camera"/>
+      </node>
+      <node id="SketchUp_001" name="SketchUp_001" type="NODE">
+        <matrix sid="transform">0.0254 0 0 0 0 0.0254 0 0 0 0 0.0254 0 0 0 0 1</matrix>
+        <instance_geometry url="#ID16-mesh" name="SketchUp_001">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Marble-material" target="#Marble-material">
+                <bind_vertex_input semantic="ID16-mesh-map-0" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Hemi" name="Hemi" type="NODE">
+        <matrix sid="transform">1 0 0 -0.1124678 0 1 0 -0.05938768 0 0 1 0.9833363 0 0 0 1</matrix>
+        <instance_light url="#Hemi-light"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

@@ -51,18 +51,12 @@
     <a-scene altspace=fullspace:true sync-system="author: bookgirl; app: alt-stage">
         
  <a-assets>
-     
-    <a-asset-item id="stage" src="https://rawgit.com/Lia021/alt-stage/master/stage/dome2.dae"></a-asset-item>
-    <a-asset-item id="rainbow" src="https://rawgit.com/Lia021/alt-stage/master/stage/rainbow.dae"></a-asset-item>
-    <a-asset-item id="cover" src="https://rawgit.com/Lia021/alt-stage/master/stage/covor.dae"></a-asset-item>
-    <a-asset-item id="circle" src="https://rawgit.com/Lia021/alt-stage/master/stage/circle.dae"></a-asset-item>
-    <a-asset-item id="table" src="https://rawgit.com/Lia021/alt-stage/master/stage/table3.dae"></a-asset-item>
-    <a-asset-item id="altspace" src="https://rawgit.com/Lia021/alt-stage/master/stage/trangle.dae"></a-asset-item>
-    <a-asset-item id="stagefloor" src="https://rawgit.com/Lia021/alt-stage/master/floor1.dae"></a-asset-item>
-    <a-asset-item id="stagefloor2" src="https://rawgit.com/Lia021/alt-stage/master/stage%20tile.dae"></a-asset-item>
-    
+
+    <a-asset-item id="stage" src="https://rawgit.com/Lia021/stage/master/darkstage/darkstage.dae"></a-asset-item>
+    <a-asset-item id="rainbow" src="https://rawgit.com/Lia021/stage/master/darkstage/green-light.dae"></a-asset-item>
+    <a-asset-item id="circle" src="https://rawgit.com/Lia021/stage/master/darkstage/stage-floor.dae"></a-asset-item>
+
        
- 
      
      
      
@@ -71,41 +65,16 @@
  </a-assets>
       
       
- <!--stage-->
+<!--stage-->
      
- <a-entity position="0 0 0" scale="37 37 37"  collada-model="#stage"> <a-animation attribute="rotation" dur="340000" fill="forwards" to="0 -360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
-    
-  <!--rainbow-->
-     
-  <a-entity position="0 0 0" scale="37.50 37.50 37.50"  collada-model="#rainbow"n-mesh-collider="type: environment; convex: false"> <a-animation attribute="rotation" dur="35000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
-  
-  <!--cover-->
-     
-  <a-entity position="0 0 0" scale="37.80 37.70 37.80" rotation="0 360 0" collada-model="#cover"n-mesh-collider="type: environment; convex: false"></a-entity>
+<a-entity position="0 -1 0" scale="37 37 37"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"><a-animation attribute="rotation" dur="35000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
+
+<!--rainbow-->
  
-  <!--circle-->
-     
+<a-entity position="0 -1 0" scale="37.40 37.40 37.40"  collada-model="#rainbow"n-mesh-collider="type: environment; convex: false"> <a-animation attribute="rotation" dur="35000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
 
-  <a-entity position="0 -0.05 0" scale="4 4 4" collada-model="#circle"n-mesh-collider="type: environment; convex: false"></a-entity>
-  
-  <!--table-->
-     
-  <a-entity position="0 1.20 0" scale="1.10 1.10 1.10" collada-model="#table"n-mesh-collider="type: environment; convex: false"></a-entity>
-    
-  <!--altspace-->
-     
- <a-entity position="0 2 0" scale="1 1 1"  collada-model="#altspace"> <a-animation attribute="rotation" dur="32000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
+<!--circle-->
+ 
+<a-entity position="0 0.15 0" scale="37.50 37.50 37.50" collada-model="#circle"n-mesh-collider="type: environment; convex: false"></a-entity>
 
- <!--sky-->
-
- <a-sky src="https://rawgit.com/Lia021/hunted-birthday/master/star2.jpg"radius="300"></a-sky>
-
- <!--stagefloor-->
-
- <a-entity position="0 -0.03 0" scale="37 37 37" collada-model="#stagefloor"><a-animation attribute="rotation" dur="100000" fill="forwards" to="0 -360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
-  
-  <!--stagefloor2-->
-
-  <a-entity position="0 -0.05 0" scale="36.70 36.70 36.70" collada-model="#stagefloor2"><a-animation attribute="rotation" dur="100000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
-  
 

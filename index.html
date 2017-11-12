@@ -51,7 +51,7 @@
     <a-scene altspace=fullspace:true sync-system="author: bookgirl; app: alt-stage">
         
  <a-assets>
-
+     
     <a-asset-item id="stage" src="https://rawgit.com/Lia021/stage/master/darkstage/darkstage.dae"></a-asset-item>
     <a-asset-item id="rainbow" src="https://rawgit.com/Lia021/stage/master/darkstage/green-light.dae"></a-asset-item>
     <a-asset-item id="circle" src="https://rawgit.com/Lia021/stage/master/darkstage/stage-floor.dae"></a-asset-item>
@@ -65,16 +65,16 @@
  </a-assets>
       
       
-<!--stage-->
+ <!--stage-->
      
-<a-entity position="0 -1 0" scale="37 37 37"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"><a-animation attribute="rotation" dur="35000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
+ <a-entity position="0 -1 0" scale="37 37 37"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"><a-animation attribute="rotation" dur="35000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
 
-<!--rainbow-->
+ <!--rainbow-->
  
-<a-entity position="0 -1 0" scale="37.40 37.40 37.40"  collada-model="#rainbow"n-mesh-collider="type: environment; convex: false"> <a-animation attribute="rotation" dur="35000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
+ <a-entity position="0 -1 0" scale="37.40 37.40 37.40"  collada-model="#rainbow"n-mesh-collider="type: environment; convex: false"> <a-animation attribute="rotation" dur="35000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
 
-<!--circle-->
+ <!--circle-->
  
-<a-entity position="0 0.15 0" scale="37.50 37.50 37.50" collada-model="#circle"n-mesh-collider="type: environment; convex: false"></a-entity>
+ <a-entity position="0 0.15 0" scale="37.50 37.50 37.50" collada-model="#circle"n-mesh-collider="type: environment; convex: false"></a-entity>
 
 

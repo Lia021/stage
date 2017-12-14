@@ -4,34 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
-  <script src="https://sdk.altvr.com/libs/altspace.js/2.6.0/altspace.min.js"></script>
-  <script>
-    // n-skeleton-parent only works with root meshes at the moment. Since most model loaders use a root
-    // container object, we need to collapse the model so that n-skeleton-parent can access the mesh directly.
-    AFRAME.registerComponent('collapse-model', {
-        init: function () {
-            this.el.addEventListener('model-loaded', function () {
-                this.el.object3DMap.mesh.updateMatrixWorld();
-                var mesh;
-                this.el.object3DMap.mesh.traverse(function (obj) {
-                    if (!mesh && obj instanceof THREE.Mesh) {
-                        mesh = obj;
-                    }
-                }.bind(this))
-                if (mesh) {
-                    this.el.sceneEl.object3D.updateMatrixWorld(true);
-                    mesh.scale.copy(mesh.getWorldScale());
-                    this.el.setObject3D('mesh', mesh);
-                    // setObject3D emits this event in a-frame 0.4.0
-                    this.el.emit('object3dset', {
-                        type: 'mesh'
-                    });
-                }
-            }.bind(this));
-        }
-    });
-  </script>
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="https://sdk.altvr.com/libs/altspace.js/2.7.1/altspace.min.js"></script>
+ 
   <script>
     altspace.getThreeJSTrackingSkeleton().then(function (skeleton) {
           window.head = skeleton.getJoint('Head');
@@ -52,11 +27,8 @@
         
  <a-assets>
      
-    <a-asset-item id="stage" src="https://rawgit.com/Lia021/stage/master/darkstage/darkstage.dae"></a-asset-item>
-    <a-asset-item id="rainbow" src="https://rawgit.com/Lia021/stage/master/darkstage/green-light.dae"></a-asset-item>
-    <a-asset-item id="circle" src="https://rawgit.com/Lia021/stage/master/darkstage/stage-floor.dae"></a-asset-item>
-
-       
+    <a-asset-item id="stage" src="https://rawgit.com/Lia021/stage/master/building/building2.dae"></a-asset-item>
+    
      
      
      
@@ -67,14 +39,10 @@
       
  <!--stage-->
      
- <a-entity position="0 -1 0" scale="37 37 37"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"><a-animation attribute="rotation" dur="35000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
+ <a-entity position="0 -1 0" scale="8 8 8"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"></a-entity>
 
- <!--rainbow-->
+ <!-- Textured plane parallel to ground. -->
+ <a-plane position="39 -1.10 0" ambient-occlusion-texture-repeat="3 3"src="https://rawgit.com/Lia021/stage/master/06f6545c190af584c8a2ef1a3f949aaa.jpg" height="100" width="100"altspace-cursor-collider="enabled: false" rotation="-90 0 0"></a-plane>
+
  
- <a-entity position="0 -1 0" scale="37.40 37.40 37.40"  collada-model="#rainbow"n-mesh-collider="type: environment; convex: false"> <a-animation attribute="rotation" dur="35000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
-
- <!--circle-->
- 
- <a-entity position="0 0.15 0" scale="37.50 37.50 37.50" collada-model="#circle"n-mesh-collider="type: environment; convex: false"></a-entity>
-
 

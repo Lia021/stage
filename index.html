@@ -28,6 +28,7 @@
  <a-assets>
      
     <a-asset-item id="stage" src="https://rawgit.com/Lia021/stage/master/club%20stage/stage%20for%20club2.dae"></a-asset-item>
+    <a-asset-item id="bleacher-v2" src="https://rawgit.com/Lia021/stage/master/bleacher-v2/bleacher-v2.2.dae"></a-asset-item>
     
      
      
@@ -40,6 +41,11 @@
  <!--stage-->
      
  <a-entity position="-10 0.50 0" scale="9 9 9"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"></a-entity>
+
+ <!--bleacher-v2-->
+     
+ <a-entity position="20 -0.75 1" scale="9 9 9"  collada-model="#bleacher-v2"n-mesh-collider="type: environment; convex: false"></a-entity>
+ 
 
  <!-- Textured plane parallel to ground. -->
  <a-plane position="39 -1.10 0" ambient-occlusion-texture-repeat="3 3"src="https://rawgit.com/Lia021/stage/master/06f6545c190af584c8a2ef1a3f949aaa.jpg" height="100" width="100"altspace-cursor-collider="enabled: false" rotation="-90 0 0"></a-plane>

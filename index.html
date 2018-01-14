@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
   <script src="https://sdk.altvr.com/libs/altspace.js/2.7.1/altspace.min.js"></script>
  
   <script>
@@ -27,7 +27,7 @@
         
  <a-assets>
      
-    <a-asset-item id="stage" src="https://rawgit.com/Lia021/stage/master/building/building2.dae"></a-asset-item>
+    <a-asset-item id="stage" src="https://rawgit.com/Lia021/stage/master/club%20stage/stage%20for%20club2.dae"></a-asset-item>
     
      
      
@@ -39,10 +39,13 @@
       
  <!--stage-->
      
- <a-entity position="0 -1 0" scale="8 8 8"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"></a-entity>
+ <a-entity position="-10 0.50 0" scale="9 9 9"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"></a-entity>
 
  <!-- Textured plane parallel to ground. -->
  <a-plane position="39 -1.10 0" ambient-occlusion-texture-repeat="3 3"src="https://rawgit.com/Lia021/stage/master/06f6545c190af584c8a2ef1a3f949aaa.jpg" height="100" width="100"altspace-cursor-collider="enabled: false" rotation="-90 0 0"></a-plane>
 
- 
+ <!--sky-->
+
+ <a-sky radius="300" src="https://rawgit.com/Lia021/home/master/G26GWok.jpg"></a-sky>
+   
 

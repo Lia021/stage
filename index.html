@@ -29,6 +29,7 @@
      
     <a-asset-item id="stage" src="https://rawgit.com/Lia021/stage/master/club%20stage/stage%20for%20club2.dae"></a-asset-item>
     <a-asset-item id="bleacher-v2" src="https://rawgit.com/Lia021/stage/master/bleacher-v2/bleacher-v2.2.dae"></a-asset-item>
+    <a-asset-item id="pugdesk" src="https://rawgit.com/Lia021/stage/master/pug-desk/pugdesk3.dae"></a-asset-item>
     
      
      
@@ -44,7 +45,11 @@
 
  <!--bleacher-v2-->
      
- <a-entity position="20 -0.75 1" scale="9 9 9"  collada-model="#bleacher-v2"n-mesh-collider="type: environment; convex: false"></a-entity>
+ <a-entity position="17 -0.75 0.05" scale="9 9 9"  collada-model="#bleacher-v2"n-mesh-collider="type: environment; convex: false"></a-entity>
+ 
+ <!--pugdesk-->
+     
+ <a-entity position="0 0.20 -12" scale="2 3 2.50"  collada-model="#pugdesk"n-mesh-collider="type: environment; convex: false"></a-entity>
  
 
  <!-- Textured plane parallel to ground. -->
@@ -54,4 +59,8 @@
 
  <a-sky radius="300" src="https://rawgit.com/Lia021/home/master/G26GWok.jpg"></a-sky>
    
-
+ <!--inclser-->
+       
+ <a-entity position="-10 1 0" rotation="0 90 0" scale="4 4 4"
+ n-layout-browser="url:https://video-jukebox.firebaseapp.com/index.html?categoryUrl=https%3A%2F%2Faccount.altvr.com%2Fapi%2Fpublic%2Fusers%2F403147243432968910%2Fvideo_jukebox_category.json&room=; isEnclosure:true">
+ </a-entity>

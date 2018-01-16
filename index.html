@@ -5,8 +5,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
-  <script src="https://sdk.altvr.com/libs/altspace.js/2.7.1/altspace.min.js"></script>
+  <script src="https://sdk.altvr.com/libs/altspace.js/2.6.0/altspace.min.js"></script>
  
+  <script>
+    // n-skeleton-parent only works with root meshes at the moment. Since most model loaders use a root
+    // container object, we need to collapse the model so that n-skeleton-parent can access the mesh directly.
+    AFRAME.registerComponent('collapse-model', {
+        init: function () {
+            this.el.addEventListener('model-loaded', function () {
+                this.el.object3DMap.mesh.updateMatrixWorld();
+                var mesh;
+                this.el.object3DMap.mesh.traverse(function (obj) {
+                    if (!mesh && obj instanceof THREE.Mesh) {
+                        mesh = obj;
+                    }
+                }.bind(this))
+                if (mesh) {
+                    this.el.sceneEl.object3D.updateMatrixWorld(true);
+                    mesh.scale.copy(mesh.getWorldScale());
+                    this.el.setObject3D('mesh', mesh);
+                    // setObject3D emits this event in a-frame 0.4.0
+                    this.el.emit('object3dset', {
+                        type: 'mesh'
+                    });
+                }
+            }.bind(this));
+        }
+    });
+  </script>
   <script>
     altspace.getThreeJSTrackingSkeleton().then(function (skeleton) {
           window.head = skeleton.getJoint('Head');
@@ -21,18 +47,21 @@
           }
         })
   </script>
-
   <body>
-    <a-scene altspace=fullspace:true sync-system="author: bookgirl; app: alt-stage">
+    <a-scene altspace=fullspace:true sync-system="author: bookgirl; app: stage">
         
  <a-assets>
      
     <a-asset-item id="stage" src="https://rawgit.com/Lia021/stage/master/club%20stage/stage%20for%20club2.dae"></a-asset-item>
     <a-asset-item id="bleacher-v2" src="https://rawgit.com/Lia021/stage/master/bleacher-v2/bleacher-v2.2.dae"></a-asset-item>
     <a-asset-item id="pugdesk" src="https://rawgit.com/Lia021/stage/master/pug-desk/pugdesk3.dae"></a-asset-item>
+    <a-asset-item id="queen-mic" src="https://rawgit.com/Lia021/stage/master/mic-queen/mic-queen2.dae"></a-asset-item>
     
      
-     
+    <a-mixin id="queen-mic" collada-model="#queen-mic" collapse-model></a-mixin>
+    
+   <a-mixin id="parent-to-right-hand"scale="1.50 1.55 1.50" position="0.07 -0.03 -0.09" rotation="-90 90 0" n-skeleton-parent="part: hand; side: right;" sync sync-n-skeleton-parent></a-mixin>
+
      
      
      
@@ -64,3 +93,8 @@
  <a-entity position="-10 4.50 0" rotation="0 90 0" scale="9 9 9"
  n-layout-browser="url:https://video-jukebox.firebaseapp.com/index.html?categoryUrl=https%3A%2F%2Faccount.altvr.com%2Fapi%2Fpublic%2Fusers%2F403147243432968910%2Fvideo_jukebox_category.json&room=; isEnclosure:true">
  </a-entity>
+
+   <!--queen-mic-->
+
+   <a-entity position="0.50 1 -13" scale="1.50 1.50 1.50"mixin="queen-mic" rotation="0 0 0" instantiator="on: click;group: queen-mic; mixin: queen-mic parent-to-right-hand"></a-entity>
+   

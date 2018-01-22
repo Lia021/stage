@@ -56,6 +56,7 @@
     <a-asset-item id="bleacher-v2" src="https://rawgit.com/Lia021/stage/master/bleacher-v2/bleacher-v2.2.dae"></a-asset-item>
     <a-asset-item id="pugdesk" src="https://rawgit.com/Lia021/stage/master/pug-desk/pugdesk3.dae"></a-asset-item>
     <a-asset-item id="queen-mic" src="https://rawgit.com/Lia021/stage/master/mic-queen/v.fmic.dae"></a-asset-item>
+    <a-asset-item id="spawn" src="https://rawgit.com/Lia021/stage/master/dome-spawn/dowm-spawn.dae"></a-asset-item>
     
      
     <a-mixin id="queen-mic" collada-model="#queen-mic" collapse-model></a-mixin>
@@ -70,19 +71,23 @@
       
  <!--stage-->
      
- <a-entity position="-10 1.20 0" scale="9 9 9"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"></a-entity>
+ <a-entity position="-50 1.20 0" scale="9 9 9"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"></a-entity>
 
  <!--bleacher-v2-->
      
- <a-entity position="13 -0.65 0.05" scale="9 9 9"  collada-model="#bleacher-v2"n-mesh-collider="type: environment; convex: false"></a-entity>
+ <a-entity position="-27 -0.65 0.05" scale="9 9 9"  collada-model="#bleacher-v2"n-mesh-collider="type: environment; convex: false"></a-entity>
  
  <!--pugdesk-->
      
- <a-entity position="-0.70 0.70 -12" scale="2 2 2"  collada-model="#pugdesk"n-mesh-collider="type: environment; convex: false"></a-entity>
+ <a-entity position="-43 0.70 -11" scale="2 2 2"  collada-model="#pugdesk"n-mesh-collider="type: environment; convex: false"></a-entity>
  
+  <!--spawn-->
+     
+  <a-entity position="-37.85 0 0" scale="20 20 20"  collada-model="#spawn"n-mesh-collider="type: environment; convex: false"></a-entity>
+  
 
  <!-- Textured plane parallel to ground. -->
- <a-plane position="0 0 0" repeat="11 11"src="https://rawgit.com/Lia021/stage/master/gray%20carpet.jpg" height="50" width="50"altspace-cursor-collider="enabled: false" rotation="-90 0 0"></a-plane>
+ <a-plane position="-29 0 0" repeat="11 11"src="https://rawgit.com/Lia021/stage/master/gray%20carpet.jpg" height="50" width="50"altspace-cursor-collider="enabled: false" rotation="-90 0 0"></a-plane>
 
  <!--sky-->
 
@@ -90,11 +95,11 @@
    
  <!--inclser-->
        
- <a-entity position="-9.70 4.90 0" rotation="0 90 0" scale="11.80 11 11.80"
+ <a-entity position="-50 4.90 0" rotation="0 90 0" scale="11.80 11 11.80"
  n-layout-browser="url:https://video-jukebox.firebaseapp.com/index.html?categoryUrl=https%3A%2F%2Faccount.altvr.com%2Fapi%2Fpublic%2Fusers%2F403147243432968910%2Fvideo_jukebox_category.json&room=; isEnclosure:true">
  </a-entity>
 
    <!--queen-mic-->
 
-   <a-entity position="-0.15 1 -13" scale="1 1 1"mixin="queen-mic" rotation="0 170 0" instantiator="on: click;group: queen-mic; mixin: queen-mic parent-to-right-hand"></a-entity>
+   <a-entity position="-42.53 1 -12" scale="1 1 1"mixin="queen-mic" rotation="0 170 0" instantiator="on: click;group: queen-mic; mixin: queen-mic parent-to-right-hand"></a-entity>
    

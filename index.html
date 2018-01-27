@@ -57,6 +57,8 @@
     <a-asset-item id="pugdesk" src="https://rawgit.com/Lia021/stage/master/pug-desk/pugdesk3.dae"></a-asset-item>
     <a-asset-item id="queen-mic" src="https://rawgit.com/Lia021/stage/master/mic-queen/v.fmic.dae"></a-asset-item>
     <a-asset-item id="spawn" src="https://rawgit.com/Lia021/stage/master/spawn2/spawn2.dae"></a-asset-item>
+    <a-asset-item id="statue" src="https://rawgit.com/Lia021/stage/master/statue/statue.dae"></a-asset-item>
+    <a-asset-item id="trangel" src="https://rawgit.com/Lia021/stage/master/statue/trangel.dae"></a-asset-item>
     
      
     <a-mixin id="queen-mic" collada-model="#queen-mic" collapse-model></a-mixin>
@@ -85,6 +87,18 @@
      
   <a-entity position="0 0 0" scale="8.10 7 9.10"  collada-model="#spawn"n-mesh-collider="type: environment; convex: false"></a-entity>
   
+  <!--statue-->
+     
+  <a-entity position="0 0.05 0" scale="3 3 3"  collada-model="#statue"n-mesh-collider="type: environment; convex: false"><a-animation attribute="rotation" dur="19999" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear">
+  </a-animation>
+</a-entity>
+   
+  <!--trangel-->
+     
+  <a-entity position="0 0.70 0" scale="15 15 15"  collada-model="#trangel"n-mesh-collider="type: environment; convex: false"><a-animation attribute="rotation" dur="19999" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear">
+  </a-animation>
+</a-entity>
+   
 
  <!-- Textured plane parallel to ground. -->
  <a-plane position="-29 0 0" repeat="11 11"src="https://rawgit.com/Lia021/stage/master/gray%20carpet.jpg" height="50" width="85"altspace-cursor-collider="enabled: false" rotation="-90 0 0"></a-plane>

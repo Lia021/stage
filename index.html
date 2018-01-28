@@ -59,6 +59,7 @@
     <a-asset-item id="spawn" src="https://rawgit.com/Lia021/stage/master/spawn2/spawn3.dae"></a-asset-item>
     <a-asset-item id="statue" src="https://rawgit.com/Lia021/stage/master/statue/statue.dae"></a-asset-item>
     <a-asset-item id="trangel" src="https://rawgit.com/Lia021/stage/master/statue/trangel.dae"></a-asset-item>
+    <a-asset-item id="arrow" src="https://rawgit.com/Lia021/stage/master/light-arrow/arrow.dae"></a-asset-item>
     
      
     <a-mixin id="queen-mic" collada-model="#queen-mic" collapse-model></a-mixin>
@@ -73,32 +74,62 @@
       
  <!--stage-->
      
- <a-entity position="-50 1.20 0" scale="9 9 9"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"></a-entity>
+ <a-entity position="-55 1.20 0" scale="9 9 9"  collada-model="#stage"n-mesh-collider="type: environment; convex: false"></a-entity>
 
  <!--bleacher-v2-->
      
- <a-entity position="-27 -0.65 0.03" scale="9 9 9"  collada-model="#bleacher-v2"n-mesh-collider="type: environment; convex: false"></a-entity>
+ <a-entity position="-31 -0.65 0.03" scale="9 9 9"  collada-model="#bleacher-v2"n-mesh-collider="type: environment; convex: false"></a-entity>
  
  <!--pugdesk-->
      
- <a-entity position="-43 0.70 -11" scale="2 2 2"  collada-model="#pugdesk"n-mesh-collider="type: environment; convex: false"></a-entity>
+ <a-entity position="-46 0.70 -11" scale="2 2 2"  collada-model="#pugdesk"n-mesh-collider="type: environment; convex: false"></a-entity>
  
   <!--spawn-->
      
-  <a-entity position="0 0 0" scale="8.10 7 9.10"  collada-model="#spawn"n-mesh-collider="type: environment; convex: false"></a-entity>
+  <a-entity position="-10 0 0" scale="8.10 7 8.10"  collada-model="#spawn"n-mesh-collider="type: environment; convex: false"></a-entity>
   
   <!--statue-->
      
-  <a-entity position="0 0.05 0" scale="3 3 3"  collada-model="#statue"n-mesh-collider="type: environment; convex: false"><a-animation attribute="rotation" dur="19999" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear">
+  <a-entity position="-10 0.05 0" scale="3 3 3"  collada-model="#statue"n-mesh-collider="type: environment; convex: false"><a-animation attribute="rotation" dur="19999" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear">
   </a-animation>
 </a-entity>
    
   <!--trangel-->
      
-  <a-entity position="0 0.70 0" scale="15 15 15"  collada-model="#trangel"n-mesh-collider="type: environment; convex: false"><a-animation attribute="rotation" dur="19999" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear">
+  <a-entity position="-10 0.70 0" scale="15 15 15"  collada-model="#trangel"n-mesh-collider="type: environment; convex: false"><a-animation attribute="rotation" dur="19999" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear">
   </a-animation>
 </a-entity>
    
+ <!--arrow-->
+     
+ <a-entity position="-1 0 0"rotation="0 90 0" scale="4 4 4"  collada-model="#arrow"n-mesh-collider="type: environment; convex: false"></a-entity>
+
+  <!--arrow2-->
+     
+  <a-entity position="-10 0 8"rotation="0 180 0" scale="4 4 4"  collada-model="#arrow"n-mesh-collider="type: environment; convex: false"></a-entity>
+  
+  <!--arrow3-->
+     
+  <a-entity position="-10 0 15"rotation="0 90 0" scale="4 4 4"  collada-model="#arrow"n-mesh-collider="type: environment; convex: false"></a-entity>
+   
+  <!--arrow4-->
+     
+  <a-entity position="-10 0 -8"rotation="0 0 0" scale="4 4 4"  collada-model="#arrow"n-mesh-collider="type: environment; convex: false"></a-entity>
+
+  <!--arrow5-->
+     
+  <a-entity position="-43 0 17"rotation="0 0 0" scale="4 4 4"  collada-model="#arrow"n-mesh-collider="type: environment; convex: false"></a-entity>
+    
+  <!--arrow6-->
+       
+  <a-entity position="-43 0 -17"rotation="0 180 0" scale="4 4 4"  collada-model="#arrow"n-mesh-collider="type: environment; convex: false"></a-entity>
+     
+    
+  <!--arrow5-->
+       
+  <a-entity position="-10 0 -15"rotation="0 90 0" scale="4 4 4"  collada-model="#arrow"n-mesh-collider="type: environment; convex: false"></a-entity>
+     
+
 
  <!-- Textured plane parallel to ground. -->
  <a-plane position="-29 0 0" repeat="11 11"src="https://rawgit.com/Lia021/stage/master/gray%20carpet.jpg" height="50" width="85"altspace-cursor-collider="enabled: false" rotation="-90 0 0"></a-plane>
@@ -109,43 +140,43 @@
    
  <!--inclser-->
        
- <a-entity position="-49 4.90 0" rotation="0 90 0" scale="11.80 11 11.80"
+ <a-entity position="-54 4.90 0" rotation="0 90 0" scale="11.80 11 11.80"
  n-layout-browser="url:https://video-jukebox.firebaseapp.com/index.html?categoryUrl=https%3A%2F%2Faccount.altvr.com%2Fapi%2Fpublic%2Fusers%2F403147243432968910%2Fvideo_jukebox_category.json&room=; isEnclosure:true">
  </a-entity>
 
    <!--queen-mic-->
 
-   <a-entity position="-42.53 1 -12" scale="1 1 1"mixin="queen-mic" rotation="0 170 0" instantiator="on: click;group: queen-mic; mixin: queen-mic parent-to-right-hand"></a-entity>
+   <a-entity position="-45.53 1 -12" scale="1 1 1"mixin="queen-mic" rotation="0 170 0" instantiator="on: click;group: queen-mic; mixin: queen-mic parent-to-right-hand"></a-entity>
    
 <!-- poster-ben&shoo -->
 
-<a-image position="8 2 3" height="1"width="0.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/BenandShoo.jpg"></a-image>
+<a-image position="-2 2 3" height="1"width="0.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/BenandShoo.jpg"></a-image>
 
 <!-- poster-katherine -->
 
-<a-image position="8 2 -3" height="1"width="0.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/katherine.png"></a-image>
+<a-image position="-2 2 -3" height="1"width="0.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/katherine.png"></a-image>
 
 <!-- poster-falcrons -->
 
-<a-image position="8 2 -5" height="1"width="1.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/Falkrons2.png"></a-image>
+<a-image position="-2 2 -5" height="1"width="1.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/Falkrons2.png"></a-image>
 
 <!-- poster-catts&jermey -->
 
-<a-image position="8 2 5" height="1"width="0.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/CattzandJeremy.jpg"></a-image>
+<a-image position="-2 2 5" height="1"width="0.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/CattzandJeremy.jpg"></a-image>
 
 <!-- poster-joe&yunji -->
 
-<a-image position="8 2 7" height="1"width="0.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/future%20space.jpg"></a-image>
+<a-image position="-2 2 7" height="1"width="0.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/future%20space.jpg"></a-image>
 
 <!-- poster-SLOAN -->
 
-<a-image position="-8 2 -5" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/sloan.png"></a-image>
+<a-image position="-18 2 -5" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/sloan.png"></a-image>
 
 <!-- poster-SCHMITTY -->
 
-<a-image position="-8 2 7" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/Schmitty.jpg"></a-image>
+<a-image position="-18 2 5" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/Schmitty.jpg"></a-image>
 
 <!-- poster-steven -->
 
-<a-image position="-8 2 0" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/Steven.jpg"></a-image>
+<a-image position="-18 2 0" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/Steven.jpg"></a-image>
 

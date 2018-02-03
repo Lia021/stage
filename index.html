@@ -35,6 +35,7 @@
     <a-asset-item id="statue" src="https://rawgit.com/Lia021/stage/master/statue/statue.dae"></a-asset-item>
     <a-asset-item id="trangel" src="https://rawgit.com/Lia021/stage/master/statue/trangel.dae"></a-asset-item>
     <a-asset-item id="arrow" src="https://rawgit.com/Lia021/stage/master/light-arrow/arrow.dae"></a-asset-item>
+    <a-asset-item id="wall" src="https://rawgit.com/Lia021/stage/master/wall/wall.dae"></a-asset-item>
     
      
     <a-mixin id="queen-mic" collada-model="#queen-mic" collapse-model></a-mixin>
@@ -63,6 +64,11 @@
      
   <a-entity position="-10 0 0" scale="8.10 7 8.10"  collada-model="#spawn"n-mesh-collider="type: environment; convex: false"></a-entity>
   
+  <!--wall-->
+     
+  <a-entity position="-20.86 0 0" scale="34.57 1.90 25"  collada-model="#wall"n-mesh-collider="type: environment; convex: false"></a-entity>
+    
+
   <!--statue-->
      
   <a-entity position="-10 0.05 0" scale="3 3 3"  collada-model="#statue"n-mesh-collider="type: environment; convex: false"><a-animation attribute="rotation" dur="19999" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear">
@@ -107,7 +113,7 @@
 
 
  <!-- Textured plane parallel to ground. -->
- <a-plane position="-29 0 0" repeat="11 11"src="https://rawgit.com/Lia021/stage/master/gray%20carpet.jpg" height="50" width="85"altspace-cursor-collider="enabled: false" rotation="-90 0 0"></a-plane>
+ <a-plane position="-20 0 0" repeat="11 11"src="https://rawgit.com/Lia021/stage/master/gray%20carpet.jpg" height="50" width="70"altspace-cursor-collider="enabled: false" rotation="-90 0 0"></a-plane>
 
  <!--sky-->
 

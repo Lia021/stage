@@ -36,11 +36,16 @@
     <a-asset-item id="trangel" src="https://rawgit.com/Lia021/stage/master/statue/trangel.dae"></a-asset-item>
     <a-asset-item id="arrow" src="https://rawgit.com/Lia021/stage/master/light-arrow/arrow.dae"></a-asset-item>
     <a-asset-item id="wall" src="https://rawgit.com/Lia021/stage/master/wall/wall2.dae"></a-asset-item>
+    <a-asset-item id="hammer" src="https://rawgit.com/Lia021/stage/master/hammer/hammer.dae"></a-asset-item>
     
      
     <a-mixin id="queen-mic" collada-model="#queen-mic" collapse-model></a-mixin>
     
-   <a-mixin id="parent-to-right-hand"scale="0.03 0.044 0.03" position="0.06 -0.03 -0.09" rotation="-90 90 0" n-skeleton-parent="part: hand; side: right;" sync sync-n-skeleton-parent></a-mixin>
+    <a-mixin id="parent-to-right-hand"scale="0.03 0.044 0.03" position="0.06 -0.03 -0.09" rotation="-90 90 0" n-skeleton-parent="part: hand; side: right;" sync sync-n-skeleton-parent></a-mixin>
+    
+    <a-mixin id="hammer" collada-model="#hammer" collapse-model></a-mixin>
+    
+   <a-mixin id="parent-to-left-hand"scale="0.10 0.10 0.10" position="-0.06 -0.03 -0.05" rotation="0 190 90" n-skeleton-parent="part: hand; side: left;" sync sync-n-skeleton-parent></a-mixin>
 
      
      
@@ -125,10 +130,15 @@
  n-layout-browser="url:https://video-jukebox.firebaseapp.com/index.html?categoryUrl=https%3A%2F%2Faccount.altvr.com%2Fapi%2Fpublic%2Fusers%2F403147243432968910%2Fvideo_jukebox_category.json&room=; isEnclosure:true">
  </a-entity>
 
-   <!--queen-mic-->
+ <!--queen-mic-->
 
-   <a-entity position="-45.53 1 -12" scale="0.03 0.044 0.03"mixin="queen-mic" rotation="0 170 0" instantiator="on: click;group: queen-mic; mixin: queen-mic parent-to-right-hand"></a-entity>
-   
+ <a-entity position="-45.53 1 -12" scale="0.03 0.044 0.03"mixin="queen-mic" rotation="0 170 0" instantiator="on: click;group: queen-mic; mixin: queen-mic parent-to-right-hand"></a-entity>
+ 
+ <!--hammer-->
+
+ <a-entity position="-1 1 0" scale="0.10 0.10 0.10"mixin="hammer" rotation="0 0 0" instantiator="on: click;group: left; mixin: hammer parent-to-left-hand"></a-entity>
+ 
+
 <!-- poster-ben&shoo -->
 
 <a-image position="-2 2 3" height="1"width="0.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/BenandShoo.jpg"></a-image>
@@ -174,5 +184,7 @@
 <!--spawnintractable-->
 
 <a-entity n-spawner='res: interactables/glowstick-blue'position="0 1 0"></a-entity>
+
+
 
 

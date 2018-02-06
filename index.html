@@ -38,6 +38,7 @@
     <a-asset-item id="wall" src="https://rawgit.com/Lia021/stage/master/wall/wall2.dae"></a-asset-item>
     <a-asset-item id="hammer" src="https://rawgit.com/Lia021/stage/master/hammer/hammer.dae"></a-asset-item>
     <a-asset-item id="stump" src="https://rawgit.com/Lia021/stage/master/hammer/stump.dae"></a-asset-item>
+    <a-asset-item id="tag" src="https://rawgit.com/Lia021/stage/master/tag/tag3.dae"></a-asset-item>
     
      
     <a-mixin id="queen-mic" collada-model="#queen-mic" collapse-model></a-mixin>
@@ -47,6 +48,10 @@
     <a-mixin id="hammer" collada-model="#hammer" collapse-model></a-mixin>
     
    <a-mixin id="parent-to-left-hand"scale="0.10 0.10 0.10" position="-0.06 -0.03 -0.05" rotation="0 190 90" n-skeleton-parent="part: hand; side: left;" sync sync-n-skeleton-parent></a-mixin>
+  
+   <a-mixin id="tag" collada-model="#tag" collapse-model></a-mixin>
+   
+  <a-mixin id="parent-to-hips"scale="0.03 0.05 0.05" position="0.10 0.35 -0.15" rotation="0 105 -90" n-skeleton-parent="part: spine;" sync sync-n-skeleton-parent></a-mixin>
 
      
      
@@ -137,13 +142,19 @@
  
  <!--hammer-->
 
- <a-entity position="-45.10 1.68 -10.15" scale="0.10 0.10 0.10"mixin="hammer" rotation="140 0 0" instantiator="on: click;group: left; mixin: hammer parent-to-left-hand"></a-entity>
+ <a-entity position="-45.10 1.68 -10.15" scale="0.10 0.10 0.10"mixin="hammer" rotation="140 0 0" instantiator="on: click;group: hammer; mixin: hammer parent-to-left-hand"></a-entity>
  
+ <!--tag-->
+
+ <a-entity position="0 -2 0" scale="0.10 0.10 0.10"mixin="tag" rotation="0 -190 -90" instantiator="on: click;group: tag; mixin: tag parent-to-hips"></a-entity>
+ 
+
   <!--stump-->
      
   <a-entity position="-45.10 1.33 -10" scale="1 1 1"  collada-model="#stump"n-mesh-collider="type: environment; convex: false"></a-entity>
   
 
+  
 <!-- poster-ben&shoo -->
 
 <a-image position="-2 2 3" height="1"width="0.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/BenandShoo.jpg"></a-image>

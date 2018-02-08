@@ -39,8 +39,13 @@
     <a-asset-item id="hammer" src="https://rawgit.com/Lia021/stage/master/hammer/hammer.dae"></a-asset-item>
     <a-asset-item id="stump" src="https://rawgit.com/Lia021/stage/master/hammer/stump.dae"></a-asset-item>
     <a-asset-item id="tag" src="https://rawgit.com/Lia021/stage/master/tag/tag3.dae"></a-asset-item>
+    <a-asset-item id="kawi" src="https://rawgit.com/Lia021/stage/master/kawi/kawi.dae"></a-asset-item>
+    <a-asset-item id="smile" src="https://rawgit.com/Lia021/stage/master/kawi/smile.dae"></a-asset-item>
     
      
+
+
+
     <a-mixin id="queen-mic" collada-model="#queen-mic" collapse-model></a-mixin>
     
     <a-mixin id="parent-to-right-hand"scale="0.03 0.044 0.03" position="0.06 -0.03 -0.09" rotation="-90 90 0" n-skeleton-parent="part: hand; side: right;" sync sync-n-skeleton-parent></a-mixin>
@@ -94,34 +99,50 @@
    
  <!--arrow-->
      
- <a-entity position="-1 0 0"rotation="0 90 0" scale="4 4 4"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-1 0 0' to='-1 -0.07 0' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
+ <a-entity position="-1 0 0"rotation="0 90 0" scale="6 6 6"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-1 0 0' to='-1 -0.07 0' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
 
   <!--arrow2-->
      
-  <a-entity position="-10 0 8"rotation="0 180 0" scale="4 4 4"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-10 0 8' to='-10 -0.07 8' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
+  <a-entity position="-10 0 8"rotation="0 180 0" scale="6 6 6"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-10 0 8' to='-10 -0.07 8' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
   
   <!--arrow3-->
      
-  <a-entity position="-10 0 15"rotation="0 90 0" scale="4 4 4"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-10 0 15' to='-10 -0.07 15' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
+  <a-entity position="-10 0 15"rotation="0 90 0" scale="6 6 6"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-10 0 15' to='-10 -0.07 15' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
    
   <!--arrow4-->
      
-  <a-entity position="-10 0 -8"rotation="0 0 0" scale="4 4 4"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-10 0 -8' to='-10 -0.07 -8' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
+  <a-entity position="-10 0 -8"rotation="0 0 0" scale="6 6 6"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-10 0 -8' to='-10 -0.07 -8' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
 
   <!--arrow5-->
      
-  <a-entity position="-43 0 17"rotation="0 0 0" scale="4 4 4"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-43 0 17' to='-43 -0.07 17' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
+  <a-entity position="-43 0 17"rotation="0 0 0" scale="6 6 6"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-43 0 17' to='-43 -0.07 17' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
     
   <!--arrow6-->
        
-  <a-entity position="-43 0 -17"rotation="0 180 0" scale="4 4 4"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-43 0 -17' to='-43 -0.07 -17' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
+  <a-entity position="-43 0 -17"rotation="0 180 0" scale="6 6 6"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-43 0 -17' to='-43 -0.07 -17' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
      
     
   <!--arrow5-->
        
-  <a-entity position="-10 0 -15"rotation="0 90 0" scale="4 4 4"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-10 0 -15' to='-10 -0.07 -15' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
+  <a-entity position="-10 0 -15"rotation="0 90 0" scale="6 6 6"  collada-model="#arrow"><a-animation attribute="position" direction='alternate' from='-10 0 -15' to='-10 -0.07 -15' ease-in-out='linear' dur='1500' repeat='indefinite' /></a-entity>
      
+ <!--kami-->
 
+ <a-entity position="0 5 0">
+  <a-entity position="0 30 50" scale="20 20 20" n-mesh-collider="enabled: true; type: environment" collada-model="#kawi">
+    <a-animation attribute="rotation" dur="3500" easing="linear" repeat="indefinite" from="0 0 0" to="0 360 0"></a-animation>
+  </a-entity>
+  <a-animation attribute="rotation" dur="16000" easing="linear" repeat="indefinite" from="0 0 0" to="0 360 360"></a-animation>
+</a-entity>
+
+ <!--smile-->
+
+ <a-entity position="0 5 0">
+  <a-entity position="0 30 50" scale="20 20 20" n-mesh-collider="enabled: true; type: environment" collada-model="#smile">
+    <a-animation attribute="rotation" dur="4500" easing="linear" repeat="indefinite" from="0 0 0" to="0 360 0"></a-animation>
+  </a-entity>
+  <a-animation attribute="rotation" dur="17000" easing="linear" repeat="indefinite" from="0 0 0" to="360 0 0"></a-animation>
+</a-entity>
 
  <!-- Textured plane parallel to ground. -->
  <a-plane position="-20 0 0" repeat="11 11"src="https://rawgit.com/Lia021/stage/master/gray%20carpet.jpg" height="50" width="70"altspace-cursor-collider="enabled: false" rotation="-90 0 0"></a-plane>
@@ -146,7 +167,7 @@
  
  <!--tag-->
 
- <a-entity position="0 1 0" scale="0.10 0.10 0.10"mixin="tag" rotation="0 -190 -90" instantiator="on: click;group: tag; mixin: tag parent-to-hips"></a-entity>
+ <a-entity position="-2 1.30 2.30" scale="0.10 0.10 0.10"mixin="tag" rotation="0 -180 -90" instantiator="on: click;group: tag; mixin: tag parent-to-hips"></a-entity>
  
 
   <!--stump-->
@@ -182,24 +203,33 @@
 
 <!-- poster-SLOAN -->
 
-<a-image position="-18 2 -5" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/sloan.png"></a-image>
+<a-image position="-18 2 -1" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/sloan.png"></a-image>
 
 <!-- poster-SCHMITTY -->
 
-<a-image position="-18 2 5" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/Schmitty.jpg"></a-image>
+<a-image position="-18 2 3" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/Schmitty.jpg"></a-image>
 
 <!-- poster-steven -->
 
-<a-image position="-18 2 0" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/Steven.jpg"></a-image>
+<a-image position="-18 2 1" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/Steven.jpg"></a-image>
+
+<!-- poster-francois -->
+
+<a-image position="-18 2 -3" height="1"width="0.80" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/poster/francois.jpg"></a-image>
+
 
 <!--Banner -->
 
 <a-image position="-18 3.80 0" height="2"width="7" rotation="0 90 0"src="https://rawgit.com/Lia021/stage/master/banner-club2.png"></a-image>
 
 
-<!--spawnintractable-->
+<!--spawnintractable-blue-->
 
-<a-entity n-spawner='res: interactables/glowstick-blue'position="0 1 0"></a-entity>
+<a-entity n-spawner='res: interactables/glowstick-blue'position="-2 1.60 -2.30"></a-entity>
+
+<!--spawnintractable-red-->
+
+<a-entity n-spawner='res: interactables/glowstick-red'position="-2 1.30 -2.30"></a-entity>
 
 
 

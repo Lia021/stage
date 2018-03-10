@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-  <script src="https://sdk.altvr.com/libs/altspace.js/2.7.4/altspace.min.js"></script>
+  <script src="https://sdk.altvr.com/libs/altspace.js/2.8.1/altspace.min.js"></script>
   <script>
     altspace.getThreeJSTrackingSkeleton().then(function (skeleton) {
           window.head = skeleton.getJoint('Head');
@@ -40,7 +40,7 @@
     <a-asset-item id="stump" src="https://rawgit.com/Lia021/stage/master/hammer/stump.dae"></a-asset-item>
     <a-asset-item id="tag" src="https://rawgit.com/Lia021/stage/master/tag/tag3.dae"></a-asset-item>
     <a-asset-item id="kawi" src="https://rawgit.com/Lia021/stage/master/kawi/kawi.dae"></a-asset-item>
-    <a-asset-item id="smile" src="https://rawgit.com/Lia021/stage/master/kawi/smile.dae"></a-asset-item>
+   
     
      
 
@@ -135,15 +135,15 @@
   <a-animation attribute="rotation" dur="16000" easing="linear" repeat="indefinite" from="0 0 0" to="0 360 360"></a-animation>
 </a-entity>
 
- <!--smile-->
 
- <a-entity position="0 5 0">
-  <a-entity position="0 30 50" scale="20 20 20" n-mesh-collider="enabled: true; type: environment" collada-model="#smile">
-    <a-animation attribute="rotation" dur="4500" easing="linear" repeat="indefinite" from="0 0 0" to="0 360 0"></a-animation>
+<!--kami2-->
+
+<a-entity position="0 5 0">
+  <a-entity position="0 30 50" scale="20 20 20" n-mesh-collider="enabled: true; type: environment" collada-model="#kawi">
+    <a-animation attribute="rotation" dur="3500" easing="linear" repeat="indefinite" from="0 0 0" to="0 360 0"></a-animation>
   </a-entity>
-  <a-animation attribute="rotation" dur="17000" easing="linear" repeat="indefinite" from="0 0 0" to="360 0 0"></a-animation>
+  <a-animation attribute="rotation" dur="16000" easing="linear" repeat="indefinite" from="0 0 0" to="360 0 0"></a-animation>
 </a-entity>
-
  <!-- Textured plane parallel to ground. -->
  <a-plane position="-20 0 0" repeat="11 11"src="https://rawgit.com/Lia021/stage/master/gray%20carpet.jpg" height="50" width="70"altspace-cursor-collider="enabled: false" rotation="-90 0 0"></a-plane>
 
@@ -191,6 +191,10 @@
 <!-- poster-rage -->
 
 <a-image position="-2 2 -7" height="1"width="0.80" rotation="0 -90 0"src="https://rawgit.com/Lia021/stage/master/poster/RAGE.png"></a-image>
+
+<!-- info -->
+
+<a-image position="-4 2 -8.02" height="1"width="0.80" rotation="0 0 0"src="https://rawgit.com/Lia021/stage/master/poster/Anime%20Club%20syn.jpg"></a-image>
 
 
 <!-- poster-catts&jermey -->

@@ -39,7 +39,7 @@
     <a-asset-item id="hammer" src="hammer/hammer.dae"></a-asset-item>
     <a-asset-item id="stump" src="hammer/stump.dae"></a-asset-item>
     <a-asset-item id="tag" src="tag/tag3.dae"></a-asset-item>
-    <a-asset-item id="kawi" src="kawi/kawi.dae"></a-asset-item>
+    <a-asset-item id="kawi" src="kawi/kawi.glb"></a-asset-item>
    
     
      
@@ -129,7 +129,7 @@
  <!--kami-->
 
  <a-entity position="0 5 0">
-  <a-entity position="0 30 50" scale="20 20 20" n-mesh-collider="enabled: true; type: environment" collada-model="#kawi">
+  <a-entity position="0 30 50" scale="20 20 20" n-mesh-collider="enabled: true; type: environment" gltf-model="#kawi">
     <a-animation attribute="rotation" dur="3500" easing="linear" repeat="indefinite" from="0 0 0" to="0 360 0"></a-animation>
   </a-entity>
   <a-animation attribute="rotation" dur="16000" easing="linear" repeat="indefinite" from="0 0 0" to="0 360 360"></a-animation>
@@ -139,7 +139,7 @@
 <!--kami2-->
 
 <a-entity position="0 5 0">
-  <a-entity position="0 30 50" scale="20 20 20" n-mesh-collider="enabled: true; type: environment" collada-model="#kawi">
+  <a-entity position="0 30 50" scale="20 20 20" n-mesh-collider="enabled: true; type: environment" gltf-model="#kawi">
     <a-animation attribute="rotation" dur="3500" easing="linear" repeat="indefinite" from="0 0 0" to="0 360 0"></a-animation>
   </a-entity>
   <a-animation attribute="rotation" dur="16000" easing="linear" repeat="indefinite" from="0 0 0" to="360 0 0"></a-animation>
